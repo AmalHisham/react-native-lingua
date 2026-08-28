@@ -1,4 +1,5 @@
-import { Text, View } from "react-native";
+import { Link } from "expo-router";
+import { Text, TouchableOpacity, View } from "react-native";
 
 export default function Index() {
   return (
@@ -9,6 +10,14 @@ export default function Index() {
       <Text className="lingua-text--body-medium mt-3 text-center text-lingua-text-secondary">
         Learn languages with playful AI lessons.
       </Text>
+      <Link href="/onboarding" asChild>
+        <TouchableOpacity
+          activeOpacity={0.86}
+          className="mt-8 h-14 min-w-56 items-center justify-center rounded-lingua-lg bg-lingua-deep-purple px-8"
+        >
+          <Text className="lingua-text--h4 text-white">Open onboarding</Text>
+        </TouchableOpacity>
+      </Link>
     </View>
   );
 }
