@@ -1,5 +1,6 @@
 import { Feather } from "@expo/vector-icons";
 import { Image } from "expo-image";
+import { Link } from "expo-router";
 import { StatusBar } from "expo-status-bar";
 import { Text, TouchableOpacity, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
@@ -52,18 +53,20 @@ export default function OnboardingScreen() {
           />
         </View>
 
-        <TouchableOpacity
-          activeOpacity={0.88}
-          className="onboarding-cta mt-7 h-[72px] flex-row items-center justify-center px-7"
-        >
-          <Text className="onboarding-cta__label">Get Started</Text>
-          <Feather
-            name="chevron-right"
-            size={34}
-            color={colors.neutral.background}
-            className="absolute right-7"
-          />
-        </TouchableOpacity>
+        <Link href="/sign-up" asChild>
+          <TouchableOpacity
+            activeOpacity={0.88}
+            className="onboarding-cta mt-7 h-[72px] flex-row items-center justify-center px-7"
+          >
+            <Text className="onboarding-cta__label">Get Started</Text>
+            <Feather
+              name="chevron-right"
+              size={34}
+              color={colors.neutral.background}
+              className="absolute right-7"
+            />
+          </TouchableOpacity>
+        </Link>
       </View>
     </SafeAreaView>
   );
