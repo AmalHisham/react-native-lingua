@@ -1,0 +1,168 @@
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/preflight.css" layer(base);
+@import "tailwindcss/utilities.css";
+
+@import "nativewind/theme";
+
+:root {
+  --lingua-purple: #6c4ef5;
+  --lingua-deep-purple: #5b3bf6;
+  --lingua-blue: #4d8bff;
+  --lingua-green: #21c16b;
+  --lingua-success: #21c16b;
+  --lingua-warning: #ffc800;
+  --lingua-streak: #ff8a00;
+  --lingua-error: #ff4d4f;
+  --lingua-info: #4d8bff;
+  --lingua-text-primary: #0d132b;
+  --lingua-text-secondary: #6b7280;
+  --lingua-border: #e5e7eb;
+  --lingua-surface: #f6f7fb;
+  --lingua-background: #ffffff;
+}
+
+@layer theme {
+  @theme {
+    --color-lingua-purple: var(--lingua-purple);
+    --color-lingua-deep-purple: var(--lingua-deep-purple);
+    --color-lingua-blue: var(--lingua-blue);
+    --color-lingua-green: var(--lingua-green);
+    --color-lingua-success: var(--lingua-success);
+    --color-lingua-warning: var(--lingua-warning);
+    --color-lingua-streak: var(--lingua-streak);
+    --color-lingua-error: var(--lingua-error);
+    --color-lingua-info: var(--lingua-info);
+    --color-lingua-text-primary: var(--lingua-text-primary);
+    --color-lingua-text-secondary: var(--lingua-text-secondary);
+    --color-lingua-border: var(--lingua-border);
+    --color-lingua-surface: var(--lingua-surface);
+    --color-lingua-background: var(--lingua-background);
+
+    --font-poppins: "Poppins-Regular";
+    --font-poppins-regular: "Poppins-Regular";
+    --font-poppins-medium: "Poppins-Medium";
+    --font-poppins-semibold: "Poppins-SemiBold";
+    --font-poppins-bold: "Poppins-Bold";
+    --font-sans: "Poppins-Regular";
+
+    --text-h1: 32px;
+    --text-h1--line-height: 38.4px;
+    --text-h2: 24px;
+    --text-h2--line-height: 31.2px;
+    --text-h3: 20px;
+    --text-h3--line-height: 26px;
+    --text-h4: 16px;
+    --text-h4--line-height: 22.4px;
+    --text-body-lg: 16px;
+    --text-body-lg--line-height: 25.6px;
+    --text-body-md: 14px;
+    --text-body-md--line-height: 22.4px;
+    --text-body-sm: 13px;
+    --text-body-sm--line-height: 20.8px;
+    --text-caption: 11px;
+    --text-caption--line-height: 15.4px;
+
+    --radius-lingua-sm: 8px;
+    --radius-lingua-md: 12px;
+    --radius-lingua-lg: 16px;
+    --radius-lingua-xl: 24px;
+  }
+}
+
+@layer utilities {
+  .lingua-screen {
+    flex: 1;
+    background-color: var(--lingua-background);
+  }
+
+  .lingua-card {
+    background-color: var(--lingua-background);
+    border-color: var(--lingua-border);
+    border-radius: var(--radius-lingua-lg);
+    border-width: 1px;
+    box-shadow: 0 8px 24px rgb(13 19 43 / 0.06);
+  }
+
+  .lingua-card__section {
+    background-color: var(--lingua-surface);
+    border-radius: var(--radius-lingua-md);
+  }
+
+  .lingua-divider {
+    background-color: var(--lingua-border);
+    height: 1px;
+  }
+
+  .lingua-text--h1 {
+    font-family: var(--font-poppins-bold);
+    font-size: var(--text-h1);
+    font-weight: 700;
+    letter-spacing: 0px;
+    line-height: var(--text-h1--line-height);
+  }
+
+  .lingua-text--h2 {
+    font-family: var(--font-poppins-semibold);
+    font-size: var(--text-h2);
+    font-weight: 600;
+    letter-spacing: 0px;
+    line-height: var(--text-h2--line-height);
+  }
+
+  .lingua-text--h3 {
+    font-family: var(--font-poppins-semibold);
+    font-size: var(--text-h3);
+    font-weight: 600;
+    letter-spacing: 0px;
+    line-height: var(--text-h3--line-height);
+  }
+
+  .lingua-text--h4 {
+    font-family: var(--font-poppins-medium);
+    font-size: var(--text-h4);
+    font-weight: 500;
+    letter-spacing: 0px;
+    line-height: var(--text-h4--line-height);
+  }
+
+  .lingua-text--body-large {
+    font-family: var(--font-poppins-regular);
+    font-size: var(--text-body-lg);
+    font-weight: 400;
+    letter-spacing: 0px;
+    line-height: var(--text-body-lg--line-height);
+  }
+
+  .lingua-text--body-medium {
+    font-family: var(--font-poppins-regular);
+    font-size: var(--text-body-md);
+    font-weight: 400;
+    letter-spacing: 0px;
+    line-height: var(--text-body-md--line-height);
+  }
+
+  .lingua-text--body-small {
+    font-family: var(--font-poppins-regular);
+    font-size: var(--text-body-sm);
+    font-weight: 400;
+    letter-spacing: 0px;
+    line-height: var(--text-body-sm--line-height);
+  }
+
+  .lingua-text--caption {
+    font-family: var(--font-poppins-regular);
+    font-size: var(--text-caption);
+    font-weight: 400;
+    letter-spacing: 0px;
+    line-height: var(--text-caption--line-height);
+  }
+
+  .lingua-label {
+    font-family: var(--font-poppins-semibold);
+    font-size: var(--text-caption);
+    font-weight: 600;
+    letter-spacing: 0px;
+    line-height: var(--text-caption--line-height);
+    text-transform: uppercase;
+  }
+}
